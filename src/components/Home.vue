@@ -51,8 +51,7 @@
             <b-row>
             <b-col cols="2"></b-col>
             <b-col cols="4">
-                <div style="margin-top: 5%;">
-                    <b-card style="max-width: 30rem; background-color:#cecece; box-shadow: 0 6px 20px rgb(56 125 255 / 17%)">
+                    <b-card style="max-width: 30rem; background-color:#cecece; box-shadow: 0 6px 20px rgb(56 125 255 / 17%); margin-top: 5%; display: flex;">
                     <img src="../assets/TicTacToe.png" class="picture2">
                     <img src="../assets/TicTacToe2.png" class="picture3">
                         <b-card-title>
@@ -61,12 +60,11 @@
                         <b-card-text style="color: black;">A Tic Tac Toe game built utilizing the Object-Oriented Programming paradigm, allowing the player to play against an AI player.</b-card-text>
                         <b-card-text style="color: black; font-weight: bold;">Python, Android Studio</b-card-text>
                     </b-card>
-                </div>
                 
             </b-col>
             <b-col cols="4">
                 <div style="margin-top: 5%">
-                    <b-card style="max-width: 30rem; background-color:#cecece; box-shadow: 0 6px 20px rgb(56 125 255 / 17%)">
+                    <b-card style="max-width: 30rem; background-color:#cecece; box-shadow: 0 6px 20px rgb(56 125 255 / 17%);">
                         <img src="../assets/Rock-Paper-Scissors.png" class="picture4">
                         <b-card-title>
                             <a href="https://github.com/cuongpq1000/Rock-Paper-Scissors" target="_blank" id="text">Rock Paper Scissors</a>
@@ -198,4 +196,19 @@
         text-align: center;
         width: 80%;
     }
+    @media only screen and (max-width: 1307px) {
+    .home {
+        padding-top: 100px;
+    }
+    @media only screen and (max-width: 1024px) {
+	b-card {
+		margin-bottom: 2rem;
+	}
+}
+@media only screen and (min-width: 1024px) {
+	b-card {
+		display: flex;
+	}
+}
+}
 </style>

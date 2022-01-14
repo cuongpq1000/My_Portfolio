@@ -1,102 +1,123 @@
 <template>
-<div class="contact">
-  <form action="action_page.php">
-    <div class="row">
-      <div class="col-25">
-        <label for="fname">First Name</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="First Name">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="lname" style="margin-left: 20%;">Last Name</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="lname" name="lastname" placeholder="Last Name">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="subject">Subject</label>
-      </div>
-      <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      </div>
-    </div>
-  </form>
-</div>
+  <div class="contact">
+      <b-row class="text-center">
+      <b-col cols="2"></b-col>
+      <b-col cols="4">
+        <h3 class="titles">CONTACT ME <font-awesome-icon icon="envelope-open-text" class="circle-icon" size="2x" style="margin-left: 2%;"/></h3>
+        <p class="information">I'am happy to answer any questions you have or provide you with an estimate. Just send me a message with any questions you may have in the form below</p>
+        <h4 style="text-align: left; margin-top: 3%; margin-bottom: 2%; font-size: 18px;">NAME: </h4>
+        <b-form-input class="name" v-model="name" placeholder="Enter your name"></b-form-input>
+        <h4 style="text-align: left; margin-top: 3%; margin-bottom: 2%; font-size: 18px;">EMAIL: </h4>
+        <b-form-input class="email" v-model="email" placeholder="Enter your email"></b-form-input>
+        <h4 style="text-align: left; margin-top: 3%; margin-bottom: 2%; font-size: 18px;">SUBJECT: </h4>
+        <b-form-input class="title" v-model="title" placeholder="Enter subject"></b-form-input>
+        <h4 style="text-align: left; margin-top: 3%; margin-bottom: 2%; font-size: 18px;">MESSAGE: </h4>
+        <b-form-textarea
+      class="subject"
+      v-model="subject"
+      placeholder="Enter message..."
+      rows="6"
+      max-rows="10"
+    ></b-form-textarea>
+    <b-button class="button" variant="primary" :disabled='!isComplete' data-va="toasted" @click="send">Submit</b-button>
+      </b-col>
+
+
+      <b-col cols="4" id="info">
+        <div class="contact-info">
+          <p style="color: #999999; margin-bottom: 8%;">You can contact me through:</p>
+          <p style="color: #999999;">Email: <a href="mailto: cpham006@vt.edu" target="_blank">cpham006@vt.edu</a></p>
+          <p style="color: #999999;">Phone Number: <a href="tel://">(757)-839 2294</a></p>
+          <p style="color: #999999;">Linkedln: <a href="https://www.linkedin.com/in/cuong-pham-b2b79a196/" target="_blank">cuong pham</a></p>
+          <p style="color: #999999;">Github: <a href="https://github.com/cuongpq1000" target="_blank">cuongpq1000</a></p>
+        </div>
+      </b-col>
+  </b-row>
+      
+  </div>
 </template>
 
 <script>
+    import axios from "axios"
     export default {
-        name: "Contact"    
+        name: "Contact",
+        data() {
+      return {
+        name: '',
+        email: '',
+        title: '',
+        subject: ''
+      }
+      
+    },
+    computed: {
+      isComplete(){
+        return this.name && this.email && this.title && this.subject;
+      }
+    },
+    methods: {
+        send(){
+        const user = {
+          name: this.name,
+          email: this.email,
+          title: this.title,
+          subject: this.subject
+        };
+        alert('Thank you for getting in touch! I appreciate you contacting me. I will get back in touch with you soon!Have a great day!');
+        axios.post("http://localhost:8102/api/create-user", user).then(this.name = "", this.email = "", this.title = "", this.subject = "");
+      },
+       getdata() {
+                 axios.get("http://localhost:8102/api/user").then((res) => {
+                     console.log(res)
+                     console.log(res.data[0])
+                     this.listPeople = res.data
+                 });
+
+            }
+    }
     }
 </script>
 
 <style scoped>
-   /* Style inputs, select elements and textareas */
-input[type=text], select, textarea{
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  resize: vertical;
+  .button{
+    margin-top: 5%;
+    margin-right: 100%;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  .button:hover{
+    background-color: #337ab7;
+  }
+  .contact-info, a{
+    color: #337ab7;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    text-decoration: none;
 }
+  .contact-info{
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 10%;
+  }
+  .contact{
+    margin-top: 5%;
+  }
+  .titles{
+    text-align: left;
+  } 
+  .information{
+    margin-right: 1%;
+    margin-bottom: 1%;
+    color: #c0bdbd;
+    text-align: left;
 
-/* Style the label to display next to the inputs */
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
-
-/* Style the submit button */
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-}
-
-/* Style the container */
-.contact {
-  border-radius: 5px;
-  background-color: white;
-  padding: 20px;
-  margin-top: 5%;
-}
-
-/* Floating column for labels: 25% width */
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-
-/* Floating column for inputs: 75% width */
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
+  }            
+  @media only screen and (max-width: 1307px) {
+  .contact {
+    padding-top: 70px;
   }
 }
+
 </style>

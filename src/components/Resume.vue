@@ -3,19 +3,17 @@
        <b-row>
            <b-col cols="2"></b-col>
             <b-col cols="2">
-                <nav class="navi">
+                <b-navbar-nav>
                     <ul>
-                        <scrollactive class="my-nav">
                             <a href="#Education" class="current">Education</a><br><br>
                             <a href="#Projects" class="current">Projects</a><br><br>
                             <a href="#Skills" class="current">Skills </a><br><br>
                             <a href="#Awards" class="current">Awards</a><br><br>
-                        </scrollactive>
                     </ul>
-                </nav>
+                </b-navbar-nav>
             </b-col>
 
-            <b-col cols="6">
+            <b-col cols="6" style="margin-left: 4%;">
                 <!--Education -->
                 <div>
                 <h4 class="heading" id="Education">Education</h4>
@@ -122,12 +120,6 @@
 
                 </div>
             </div>
-
-            
-
-
-
-
 
                 
                 <!--SKill -->
@@ -328,6 +320,7 @@
     .navi li a{
         color: black;
         text-decoration: none;
+        position: fix;
     }
     .li{
         display: list-item;
@@ -335,6 +328,7 @@
     }
     .navi li a:hover{
         color:black;
+        position: fix;
     }
     .navi li a.current {
     color: #90acd1;
@@ -344,4 +338,9 @@
    .resume {
        margin-top: 5%;
    }
+    @media only screen and (max-width: 1307px) {
+    .resume {
+        padding-top: 70px;
+    }
+}
 </style>
