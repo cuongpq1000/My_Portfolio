@@ -64,7 +64,7 @@
           subject: this.subject
         };
         alert('Thank you for getting in touch! I appreciate you contacting me. I will get back in touch with you soon!Have a great day!');
-        axios.post("http://localhost:8102/api/create-user", user).then(this.name = "", this.email = "", this.title = "", this.subject = "");
+        axios.post("https://firstapplication12.herokuapp.com/", user).then(this.name = "", this.email = "", this.title = "", this.subject = "");
       },
        getdata() {
                  axios.get("http://localhost:8102/api/user").then((res) => {
