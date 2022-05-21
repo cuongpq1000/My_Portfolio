@@ -55,6 +55,32 @@
                 <div>
                     <h6>
                         <font-awesome-icon icon="briefcase" class="circle-icon" size="2x"/>
+                        April-2022
+                    </h6><br><br>
+
+                    <h6 class="title">Personal Website and Video Server</h6>
+                    <h8>The small personal website server that can serve files, stream MP4 video, and provides a simple token-based authentication API. Implement the principles of internetwork communication using the HTTP and TCP protocols using C.</h8><br><br>
+                    <h6>C</h6>
+
+                </div>
+            </div>
+            <div class="Education">
+                <div>
+                    <h6>
+                        <font-awesome-icon icon="briefcase" class="circle-icon" size="2x"/>
+                        March-2022
+                    </h6><br><br>
+
+                    <h6 class="title">Fitness Website</h6>
+                    <h8>The web application keeps track of activity records by creating the PArecords and comparing the average minutes across all PArecords.Implement backend server using Node.js, MongoDB, with Rest-API and front-end web application using Angular framework.</h8><br><br>
+                    <h6>Node.js, MongoDB, Angular</h6>
+
+                </div>
+            </div>
+            <div class="Education">
+                <div>
+                    <h6>
+                        <font-awesome-icon icon="briefcase" class="circle-icon" size="2x"/>
                         October-2021
                     </h6><br><br>
 
@@ -89,34 +115,6 @@
                     <h6 class="title">Covid-19 Case-fatality Ratio by Race/Ethnicity Visualization</h6>
                     <h8>  A Data Visualization Project allowed users to view multidimensional data from different perspectives and gave insight into data patterns.</h8><br><br>
                     <h6>Java</h6>
-
-                </div>
-            </div>
-
-            <div class="Education">
-                <div>
-                    <h6>
-                        <font-awesome-icon icon="briefcase" class="circle-icon" size="2x"/>
-                        April-2020
-                    </h6><br><br>
-
-                    <h6 class="title">Rock Paper Scissor</h6>
-                    <h8> A Rock Paper Scissors game used an AI to recognize patterns in the human opponent’s moves and exploit those patterns to its advantage.</h8><br><br>
-                    <h6>Java</h6>
-
-                </div>
-            </div>
-
-            <div class="Education">
-                <div>
-                    <h6>
-                        <font-awesome-icon icon="briefcase" class="circle-icon" size="2x"/>
-                        March-2020
-                    </h6><br><br>
-
-                    <h6 class="title">Tic Tac Toe</h6>
-                    <h8> A Tic Tac Toe game built utilizing the Object-Oriented  Programming paradigm, allowing the player to play against an AI player.</h8><br><br>
-                    <h6>Java, Python, Android Studio</h6>
 
                 </div>
             </div>

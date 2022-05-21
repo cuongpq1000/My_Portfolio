@@ -10,7 +10,7 @@
 
                     </div>
 
-                    <a href="https://docs.google.com/document/d/1LzaCiB3SPAdECD3Vu0-YoHWUhlFOvW19/edit" target="_blank" class="btn">Linked Resume</a>
+                    <a href="https://docs.google.com/document/d/1OncI50UviAizahYDePmF6LSDc1cI4MLKg25i-adgaKk/edit#" target="_blank" class="btn">Linked Resume</a>
                        
                 </div>
 
@@ -65,11 +65,11 @@
             <b-col cols="4">
                 <div style="margin-top: 5%">
                     <b-card style="max-width: 30rem; background-color:#cecece; box-shadow: 0 6px 20px rgb(56 125 255 / 17%);">
-                        <img src="../assets/Rock-Paper-Scissors.png" class="picture4">
+                        <img src="../assets/fitness.png" class="picture4">
                         <b-card-title>
-                            <a href="https://github.com/cuongpq1000/Rock-Paper-Scissors" target="_blank" id="text">Rock Paper Scissors</a>
+                            <a href="https://github.com/cuongpq1000/fitness_frontend" target="_blank" id="text">Fitness App</a>
                         </b-card-title>
-                        <b-card-text style="color: black;">A Rock Paper Scissors game used an AI to recognize patterns in the human opponent’s moves and exploit those patterns to its advantage.</b-card-text>
+                        <b-card-text style="color: black;">The web application keeps track of activity records by creating the PArecords and comparing the average minutes across all PArecords.</b-card-text>
                     </b-card>
                 </div>
                 
